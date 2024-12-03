@@ -28,9 +28,9 @@ function Lesson08() {
   return (
     <Lesson08Container>
       {/* Контролируемые и неконтролируемые компоненты */}
-      <InputExample name='example1' placeholder="example text" onChange={onChangeInput} value={inputValueExample} />
+      {/* <InputExample name='example1' placeholder="example text" onChange={onChangeInput} value={inputValueExample} /> */}
       {/* Поднятие состояния */}
-      <Counter countValue={count} onMinus={onMinusClick} onPlus={onPlusClick} />
+      {/* <Counter countValue={count} onMinus={onMinusClick} onPlus={onPlusClick} /> */}
       {/* Emotion (шаблоны) */}
       <GreenBox>Green Box</GreenBox>
       <BlueBox>Blue Box</BlueBox>
