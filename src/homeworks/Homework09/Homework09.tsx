@@ -1,6 +1,9 @@
 import { ChangeEvent, useEffect, useState } from "react"
 import axios from "axios";
 
+// import auto-animate library
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+
 import Input from "../../components/Input/Input"
 import { Homework09Component, DogImg, ErrorMessage, Spinner } from "./styles"
 
@@ -10,6 +13,8 @@ function Homework09() {
   const [dogImageUrl, setDogImageUrl] = useState<string | undefined>(undefined);
   const [error, setError] = useState<any>(undefined);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  // useAutoAnimate
+  const [containerRef] = useAutoAnimate<HTMLDivElement>();
 
   const DOG_URL = 'https://dog.ceo/api/breeds/image/random';
 
@@ -47,7 +52,8 @@ function Homework09() {
   }, [search])
 
   return (
-    <Homework09Component>
+    // ref={containerRef} use for auto-animate
+    <Homework09Component ref={containerRef}>
       <Input name='search' placeholder="Enter word" value={search} onChange={onSearchChange} />
       <Input name='note' placeholder="Enter note" value={note} onChange={onNoteChange} />
       {dogImageUrl && <DogImg src={dogImageUrl} alt='random dog' />}
