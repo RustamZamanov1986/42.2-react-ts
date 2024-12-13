@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const InputContainer = styled.div`
   display: flex;
@@ -24,4 +24,10 @@ export const InputElement = styled.input`
   &::placeholder {
     color: #a19f9f;
   }
+`;
+
+export const ErrorMessage = styled.div`
+  height: 18px;
+  color: red;
+  font-size: 16px;
 `;
